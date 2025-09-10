@@ -23,9 +23,7 @@ while True:
         break
     elif user_prompt == "help":
         print("\n","Available questions:")
-        for h in keys:
-            print ("-", h)
-        print('\n')
+        print(keys, '\n')
         continue
 
     matches = difflib.get_close_matches(user_prompt, [k.lower() for k in keys], n=1, cutoff=0.5)
