@@ -14,15 +14,15 @@ data = {
     "What is the teaching language?": "English is the official language, providing a neutral ground for communication.",
     "What happens after graduation?": "Graduates join a lifelong alumni network for continued support and collaboration."}
 
-# defining a list of all the dictionarys keys for later use
+# defining a list of all the dictionary's  keys for later use
 keys = list(data.keys())
 
 # main while loop that keeps the chatbot running
 while True:
     # what the the user is prompted
-    intial_prompt = "What would you like to know about MEET (Enter 'help' for questions list or enter 'bye' to exit.): "
+    initial_prompt = "What would you like to know about MEET (Enter 'help' for questions list or enter 'bye' to exit.): "
     # user inputs his question and it becomes all lower for less case sensetivity
-    user_prompt = input(intial_prompt).lower()
+    user_prompt = input(initial_prompt).lower()
     # if enters "bye" then says goodbye amd stops running
     if user_prompt == "bye":
         print("\n","Goodbye", "\n")
@@ -38,6 +38,7 @@ while True:
 
     # uses difflib library to find the best match based on user prompt, all the keys in the dictionary in lower case. 
     # it outputs a list with the mathces and "n=1" makes it have 1 result and "cutoff=0.45" determines how similar it needs to be (for exp. here 45% match)
+    # [what it does is find the amount of matching charecters and finds the pair with the most similarity]
     matches = difflib.get_close_matches(user_prompt, [k.lower() for k in keys], n=1, cutoff=0.45)
     
 # because empty list is falsy, if its empty will skip this part
