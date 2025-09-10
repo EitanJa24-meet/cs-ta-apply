@@ -12,13 +12,19 @@ data = {
 # data = {"1": "1.1", "2": "2.2"}
 
 while running == True:
-    user_prompt = input("What would you like to know about MEET: ").lower()
+    intial_prompt = "What would you like to know about MEET (Enter 'help' for questions list or enter 'bye' to exit.): "
+    user_prompt = input(intial_prompt).lower()
     try:
-        for i in data:
-            if i.lower() == user_prompt:
-                output = data[i]
+        if user_prompt == "bye":
+            break
+        elif user_prompt == "help":
+            output = data.keys()
+        else:
+            for i in data:
+                if i.lower() == user_prompt:
+                    output = data[i]
     except KeyError:
-        print("error, your input is not in my databse. Try asking a different question")
+        print("\n","error, your input is not in my databse. Try asking a different question","\n")
     else:
         print("\n",output, "\n")
         
