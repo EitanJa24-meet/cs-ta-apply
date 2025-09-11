@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEET GPT</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="header">MEET GPT</h1>
+
+    <div id="chat-box">
+      {% for m in conversation %}
+        <div class="message user-msg">
+          You: {{ m.user }}
+        </div>
+        <div class="message bot-msg">
+          Bot: {{ m.bot }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <form method="POST" action="{{ url_for('chat') }}" class="chat-form">
+      <input type="text" name="user_prompt" placeholder="Type a message..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>

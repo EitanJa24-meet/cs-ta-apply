@@ -47,9 +47,15 @@ while True:
         for k in keys:
             if k.lower() == matches[0]:
                 print("\n" + data[k] + "\n")
+                #stops if finds a result
                 break
     #if nothing wrks will say error that doesnt understand
     else:
         print("\n","Sorry, I don't understand that question. Try 'help' for the questions list","\n")
 
-        
+
+# add for more functionability:
+# add an api for getting more live data into the dictionary
+# using a database and not having the data hardcoded 
+# adding translation features so it is accessable in all languages (using api or database)
+# having a proper frontend for entering data

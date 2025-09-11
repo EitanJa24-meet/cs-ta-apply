@@ -1,0 +1,122 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 50px;
+    background: #0d1b2a; /* dark futuristic background */
+    color: #e0e6ed;
+}
+
+#chat-box {
+    border: 1px solid #1e3a5f;
+    padding: 15px;
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #3a506b;
+    background: #1b263b;
+    color: #e0e6ed;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #3a86ff; /* futuristic blue glow on focus */
+    box-shadow: 0 0 5px #3a86ff;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3a86ff, #00b4d8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4361ee, #0096c7);
+}
+
+.user-msg {
+    color: #3a86ff; /* bright blue for user */
+    background: rgba(58, 134, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(58, 134, 255, 0.3);
+}
+
+.bot-msg {
+    color: #00b4d8; /* light blue for bot */
+    background: rgba(0, 180, 216, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 180, 216, 0.3);
+}
+
+.bot-msg strong {
+    color: #ff4d4d; /* subtle red highlight */
+}
+
+/* Input fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #3a506b;
+    background: #1b263b;
+    color: #e0e6ed;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: #3a86ff;
+    box-shadow: 0 0 5px #3a86ff;
+}
+
+/* Submit button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #3a86ff, #00b4d8);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #4361ee, #0096c7);
+}
+
+/* Login link */
+#login-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #3a86ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#login-link:hover {
+    color: #00b4d8;
+    text-decoration: underline;
+}
+
